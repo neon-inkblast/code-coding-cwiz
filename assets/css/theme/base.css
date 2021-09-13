@@ -1,0 +1,139 @@
+:root {
+  /* ---------- Primary theme colours ---------- */
+  /* --c-primary: #b144ff; */
+  --c-primary: hsl(275, 100%, 63%);
+  --c-primary-darker: hsl(275, 100%, 58%);
+  --c-primary-lighter: hsl(275, 100%, 68%);
+  --c-primary-accent: #fff;
+  /* --c-secondary: #ff3dcf; */
+  --c-secondary: hsl(315, 100%, 63%);
+  --c-secondary-darker: hsl(315, 100%, 53%);
+  --c-secondary-lighter: hsl(315, 100%, 73%);
+  --c-secondary-accent: #fff;
+
+  /* ------------ DARK theme colours ------------ */
+  --c-background-dark: #333;
+  --c-background-dark-lighter: #444;
+  --c-background-dark-darker: #222;
+  --c-foreground-dark: #ddd;
+  --c-foreground-dark-lighter: #eee;
+  --c-foreground-dark-darker: #ccc;
+  --c-border-dark: #666;
+  --c-box-shadow-dark: #000;
+  /* Contextual colours */
+  --c-info-dark: #528cf7;
+  --c-success-dark: #70e183;
+  --c-warning-dark: #f8b84f;
+  --c-error-dark: #fd5c70;
+
+  /* ------------ LIGHT theme colours ------------ */
+  --c-background-light: #ddd;
+  --c-background-light-lighter: #eee;
+  --c-background-light-darker: #ccc;
+  --c-foreground-light: #333;
+  --c-foreground-light-lighter: #444;
+  --c-foreground-light-darker: #222;
+  --c-border-light: #333;
+  --c-box-shadow-light: #777;
+  /* Contextual colours */
+  --c-info-light: #1f5dcf;
+  --c-success-light: #116b20;
+  --c-warning-light: #ef9300;
+  --c-error-light: #be3444;
+
+  /* Theme defaults - DARK */
+  --c-background: var(--c-background-dark);
+  --c-background-lighter: var(--c-background-dark-lighter);
+  --c-background-darker: var(--c-background-dark-darker);
+  --c-background-hover: var(--c-background-dark-darker);
+  --c-foreground: var(--c-foreground-dark);
+  --c-foreground-lighter: var(--c-foreground-dark-lighter);
+  --c-foreground-darker: var(--c-foreground-dark-darker);
+  --c-foreground-hover: var(--c-foreground-dark-darker);
+  --c-border: var(--c-border-dark);
+  --c-box-shadow: var(--box-shadow--dark);
+  --c-info: var(--c-info-dark);
+  --c-success: var(--c-success-dark);
+  --c-warning: var(--c-warning-dark);
+  --c-error: var(--c-error-dark);
+
+  /* ------------------ SPACING ------------------ */
+  --space-0: 4px;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+
+  /* ------------------- OTHER ------------------- */
+  --border: 1px solid;
+  --border-radius: 2px;
+  --box-shadow: 2px 2px 5px;
+}
+
+body {
+  color: var(--c-foreground);
+  background-color: var(--c-background);
+}
+
+.light {
+  /* LIGHT theme class */
+  --c-background: var(--c-background-light);
+  --c-background-lighter: var(--c-background-light-lighter);
+  --c-background-darker: var(--c-background-light-darker);
+  --c-background-hover: var(--c-background-light-lighter);
+  --c-foreground: var(--c-foreground-light);
+  --c-foreground-lighter: var(--c-foreground-light-lighter);
+  --c-foreground-darker: var(--c-foreground-light-darker);
+  --c-foreground-hover: var(--c-foreground-light-darker);
+  --c-border: var(--c-border-light);
+  --c-box-shadow: var(--c-box-shadow-light);
+  --c-info: var(--c-info-light);
+  --c-success: var(--c-success-light);
+  --c-warning: var(--c-warning-light);
+  --c-error: var(--c-error-light);
+}
+
+.dark {
+  /* DARK theme class */
+  --c-background: var(--c-background-dark);
+  --c-background-lighter: var(--c-background-dark-lighter);
+  --c-background-darker: var(--c-background-dark-darker);
+  --c-background-hover: var(--c-background-dark-darker);
+  --c-foreground: var(--c-foreground-dark);
+  --c-foreground-lighter: var(--c-foreground-dark-lighter);
+  --c-foreground-darker: var(--c-foreground-dark-darker);
+  --c-foreground-hover: var(--c-foreground-dark-lighter);
+  --c-border: var(--c-border-dark);
+  --c-box-shadow: var(--c-box-shadow-dark);
+  --c-info: var(--c-info-dark);
+  --c-success: var(--c-success-dark);
+  --c-warning: var(--c-warning-dark);
+  --c-error: var(--c-error-dark);
+}
+
+/* ----------------- Contextual -------------------- */
+.info {
+  color: var(--c-info);
+  border-color: var(--c-info);
+}
+
+.success {
+  color: var(--c-success);
+  border-color: var(--c-success);
+}
+
+.warning {
+  color: var(--c-warning);
+  border-color: var(--c-warning);
+}
+
+.error {
+  color: var(--c-error);
+  border-color: var(--c-error);
+}
+
+.active {
+  box-shadow: 0 0 4px var(--c-primary), inset 0 0 2px var(--c-primary);
+}

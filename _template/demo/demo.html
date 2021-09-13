@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="author" content="You" />
+    <meta name="description" content="Write a description of your website for search engines here" />
+
+    <!-- Page title -->
+    <title>Theme demo</title>
+
+    <!-- Page icon -->
+    <link rel="icon" href="./faviron-48.png" sizes="48x48" type="image/png" />
+
+    <!-- Loading Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="../../assets/css/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/theme/base.css" />
+    <link rel="stylesheet" href="../../assets/css/theme/buttons.css" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <link rel="stylesheet" href="./demo.css" />
+
+    <!-- JS files -->
+    <script src="./demo.js" defer></script>
+    <script src="../../assets/js/script.js" defer></script>
+  </head>
+
+  <body class="dark pad">
+    <!-- Header and dark/light switcher -->
+    <section>
+      <nav class="flex-row" style="justify-content: flex-start">
+        <header>
+          <h1>Prebuilt page with dark and light themes</h1>
+        </header>
+        <button class="btn dark-btn active">Dark theme</button>
+        <button class="btn btn-inverse light-btn">Light theme</button>
+      </nav>
+    </section>
+
+    <main>
+      <!-- Theme colour examples and tester -->
+      <section class="margin pad">
+        <h3 style="text-align: center">Choose theme primary/secondary colours</h3>
+        <div class="flex-row" style="justify-content: space-evenly">
+          <div>
+            <label class="color-label" for="primary">Primary</label>
+            <input class="color-input" name="primary" type="color" value="#b144ff" />
+          </div>
+          <div>
+            <label class="color-label" for="primary-accent">Primary accent</label>
+            <input class="color-input" name="primary-accent" type="color" value="#ffffff" />
+          </div>
+          <div>
+            <label class="color-label" for="secondary">Secondary</label>
+            <input class="color-input" name="secondary" type="color" value="#ff3dcf" />
+          </div>
+          <div>
+            <label class="color-label" for="secondary-accent">Secondary accent</label>
+            <input class="color-input" name="secondary-accent" type="color" value="#ffffff" />
+          </div>
+        </div>
+        <div class="margin pad flex-row">
+          <button class="btn">Button</button>
+          <button class="btn btn-primary">Button</button>
+          <button class="btn btn-secondary">Button</button>
+          <button class="btn btn-tertiary">Button</button>
+        </div>
+      </section>
+
+      <!-- Contextual colour examples -->
+      <section class="margin pad flex-row">
+        <div class="notification-box">
+          <p class="pad">Contextual notification theme colours</p>
+          <div class="flex-row" style="justify-content: space-evenly">
+            <button class="btn info">Info</button>
+            <button class="btn warning">Warning</button>
+            <button class="btn error">Error</button>
+            <button class="btn success">Success</button>
+          </div>
+        </div>
+      </section>
+      <!-- Text examples -->
+      <section class="margin pad">
+        <h1>H1 - Basic page template with some theme styles</h1>
+        <h2>H2 - Basic page template with some theme styles</h2>
+        <h3>H3 - Basic page template with some theme styles</h3>
+        <h4>H4 - Basic page template with some theme styles</h4>
+        <h5>H5 - Basic page template with some theme styles</h5>
+        <h6>H6 - Basic page template with some theme styles</h6>
+        <p>&lt;p&gt; - Example paragraph element with text</p>
+      </section>
+    </main>
+  </body>
+</html>

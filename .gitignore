@@ -1,0 +1,11 @@
+# VSCode
+.vscode/*
+*.code-workspace
+# Local History for Visual Studio Code
+.history/
+ 
+# Private Node Modules
+node_modules/
+ 
+# Mac/OSX
+.DS_Store

@@ -1,0 +1,58 @@
+button {
+  background-color: var(--c-background);
+  border-radius: var(--border-radius);
+  border: var(--border) var(--c-border);
+  box-sizing: content-box;
+  color: var(--c-foreground);
+  height: var(--space-5);
+  line-height: var(--space-5);
+  margin: var(--space-2);
+  min-width: calc(var(--space-5) * 3);
+  white-space: nowrap;
+  box-shadow: var(--box-shadow) var(--c-box-shadow);
+}
+
+button:hover {
+  background-color: var(--c-background-hover);
+}
+
+.btn:active {
+  box-shadow: none;
+}
+
+.btn-inverse {
+  background-color: var(--c-foreground);
+  border: var(--border) var(--c-foreground);
+  color: var(--c-background);
+}
+
+.btn-inverse:hover {
+  background-color: var(--c-foreground-hover);
+}
+
+.btn-primary {
+  background-color: var(--c-primary);
+  border: none;
+  height: calc(var(--space-5) + 4px);
+  color: var(--c-primary-accent);
+}
+
+.btn-primary:hover {
+  background-color: var(--c-primary-darker);
+}
+
+.btn-secondary {
+  background-color: var(--c-secondary);
+  border: none;
+  height: calc(var(--space-5) + 4px);
+  color: var(--c-secondary-accent);
+}
+
+.btn-secondary:hover {
+  background-color: var(--c-secondary-darker);
+}
+
+.btn-tertiary {
+  border: var(--border) var(--c-primary);
+  color: var(--c-primary);
+}
