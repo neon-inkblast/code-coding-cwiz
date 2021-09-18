@@ -1,77 +1,69 @@
-# Web page starter template repo
+# JS Code Quiz
 
-A simple for starting a standalone web page
+A small multiple choice quiz to test your javascript knowledge.
 
-## Contents
+<hr>
+### Logic Breakdown
 
-- [Features](#features)
-- [Usage](#usage)
-- [File Structure](#file-structure)
-- [CSS Themes](#css-themes)
+- [ ] Main page
+- [ ] Highscore page
 
-<br />  
-  
-    
-## Features
+#### Main page
 
-- 📉 HTML boilerplate `index.html` file with resources linked.
-- 🎨 Default CSS
-  - ⏪ Simple `reset.css` file for standardising cross-browser.
-  - 🎓 Sensible defaults in `styles.css`.
-- 👷‍♀️ Built-in CSS Theme
-  - 🌙 Dark and 🌞 Light modes
-  - ℹ️ Contextual colours
-  - 🔘 Prebuilt button styles
-  - 🃏 Demo page
-- 🖥️ JS `script.js` file.
-- 🔠 Oxygen google font as default.
-- 😎 Placeholder favicon.
-- 🌄 3 free-to-use image assets.
+- [ ] Start button
+      <br/>
+- WHEN user clicks start
+  - [ ] Set score/timer/question back to initial values
+  - [ ] Start timer
+  - [ ] Hide start button/welcome
+  - [ ] Display first question
+        <br/>
+- WHEN user clicks answer
+  <br/>
+- IF wrong
+  - [ ] Reduce timer
+        <br/>
+- IF correct
+  - [ ] Increase score
+        <br/>
+- IF last question
+  - [ ] End game
+        <br/>
+- ELSE
+  - [ ] Display next question, restart this branch loop  
+         <br/>
+- WHEN timer reaches 0
+  - [ ] Stop timer
+  - [ ] End game
+        <br/>
+- WHEN game ended
 
-<br />
+  - [ ] Show game over elements
+  - [ ] Collect user initials
+        <br/>
 
-## Usage
+- WHEN user submits initials
+  - [ ] Load highscores from local storage
+  - [ ] Append new score to those in local storage
+  - [ ] Navigate to high scores page
 
-When starting a new project, delete the `_template` folder. It is used to hold meta files for this README and the CSS theme demonstration files.
+#### View highscore page
 
-You can also delete any of the files under `assets/images` that you aren't using, and the files under `assets/css/theme` if you're not using the built-in theme.
+- [ ] Load scores from localstorage
+- [ ] Sort scores
+- [ ] Display scores
+<hr>
 
-<br />
+### Extension ideas
 
-## File structure
-
-Project follows a clean standard for a standalone web page. See screenshot below for an example of the folder structure.
-![Project screenshot](./_template/file_layout.png "Screenshot of template file structure in VS Code")
-
-<br />
-
-## CSS Themes
-
-Project now has built-in dark and light themes. To see a demonstration of them in action, have a look at the page found under `_template/demo.html`
-
-### Usage
-
-To use the built-in themes, include the `base.css` file found in `assets/css/theme`.
-
-```html
-<link rel="stylesheet" href="assets/css/theme/base.css" />
-```
-
-To use prebuilt button styles, also include `assets/css/theme/buttons.css`. This must come after `main.css` in the stylesheet order.
-
-```html
-<link rel="stylesheet" href="assets/css/theme/buttons.css" />
-```
-
-### Dark Theme
-
-![Dark screenshot](./_template/dark_theme.png "Screenshot of example page in Dark theme")
-
-### Light Theme
-
-![Light screenshot](./_template/light_theme.png "Screenshot of example page in Light theme")
-
-<br />
+- [ ] Choose questions from a pool
+- [ ] Randomised questions
+- [ ] Randomised answer order
+- [ ] Difficulty levels
+- [ ] Score value per difficulty
+- [ ] CSS animations
+- [ ] Load questions from backend API
+- [ ] Store scores in a backend database
 
 Made with 🫀 by Ben
 ©️2021
