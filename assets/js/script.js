@@ -25,6 +25,9 @@
 
   // Event listeners
   el.start.button.addEventListener("click", onStartClick);
+  el.question.answerBtns.forEach((btn, index) => {
+    btn.addEventListener("click", checkAnswerFn(index));
+  });
 
   function onStartClick() {
     console.log("start-btn clicked");
@@ -35,7 +38,7 @@
     console.log("startQuiz()");
     initQuiz();
     startTimer();
-    showQuestion(currentQuestion);
+    showQuestion();
   }
 
   function initQuiz() {
@@ -46,19 +49,38 @@
     timer = timerInitialValue;
   }
 
-  function showQuestion(questionIndex) {
+  function showQuestion() {
     console.log("showQuestion()");
-    const currentQuestion = questions[questionIndex];
+    const question = questions[currentQuestion];
     // first hide the start section
     el.start.container.classList.add("hidden");
     // unhide the questions sections
     el.question.container.classList.remove("hidden");
     // set question text into question header
-    el.question.header.textContent = currentQuestion.question;
+    el.question.header.textContent = question.question;
     // loop through the answer button elements and update text for each one
     el.question.answerBtns.forEach((btn, index) => {
-      btn.textContent = currentQuestion.answers[index];
+      btn.textContent = question.answers[index];
     });
+  }
+
+  function checkAnswerFn(index) {
+    return function () {
+      const feedbackEl = document.createElement("div");
+      if (questions[currentQuestion].correct === index) {
+        correctAnswer(feedbackEl);
+      } else {
+        incorrectAnswer(feedbackEl);
+      }
+      el.question.feedback.appendChild(feedbackEl);
+      delayedRemoveFeedback(feedbackEl);
+      nextQuestion();
+    };
+  }
+
+  function nextQuestion() {
+    currentQuestion++;
+    showQuestion();
   }
 
   function updateTimerDisplay() {
