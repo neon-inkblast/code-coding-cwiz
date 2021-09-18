@@ -59,8 +59,11 @@
         <h2>Results</h2>
         <form>
           <label labelFor="initials">Initials</label>
-          <input id="initials-input" name="initials" type="text" placeholder="BIN" />
-          <button class="btn btn-primary">Submit</button>
+          <input id="initials-input" name="initials" type="text" placeholder="BIN" maxlength="3" />
+          <div id="validation"></div>
+          <button id="submit" class="btn btn-primary">Submit</button>
+          <button id="try-again" class="btn btn-secondary">Try again</button>
+          <ul id="scores-list"></ul>
         </form>
       </section>
     </main>

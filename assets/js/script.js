@@ -16,16 +16,20 @@
     results: {
       container: document.querySelector(".results"),
       input: document.querySelector(".results input"),
-      button: document.querySelector(".results .btn"),
+      validation: document.getElementById("validation"),
+      submitButton: document.querySelector(".results .btn-primary"),
+      tryAgainButton: document.querySelector(".results .btn-secondary"),
     },
     timer: document.getElementById("timer"),
     score: document.getElementById("score"),
   };
 
-  // Game variable initial values
+  // Game variables constants
   const scoreIncrement = 10;
   const timerIncrement = 10;
   const timerInitialValue = 180;
+  const storageKey = "highscores";
+  // Game variables
   let currentQuestion = 0;
   let score = 0;
   let timer = timerInitialValue;
@@ -39,9 +43,11 @@
     btn.addEventListener("click", checkAnswerFn(index));
   });
   // high score button
-  el.results.button.addEventListener("click", onScoreSubmit);
+  el.results.submitButton.addEventListener("click", onScoreSubmit);
+  el.results.tryAgainButton.addEventListener("click", onStartClick);
 
-  function onStartClick() {
+  function onStartClick(event) {
+    event.preventDefault();
     console.log("start-btn clicked");
     startQuiz();
   }
@@ -59,6 +65,10 @@
     score = 0;
     currentQuestion = 0;
     timer = timerInitialValue;
+
+    el.results.submitButton.disabled = false;
+    el.results.input.value = "";
+
     updateScoreDisplay();
     updateTimerDisplay();
   }
@@ -68,6 +78,7 @@
     const question = questions[currentQuestion];
     // first hide the start section
     el.start.container.classList.add("hidden");
+    el.results.container.classList.add("hidden");
     // unhide the questions sections
     el.question.container.classList.remove("hidden");
     // set question text into question header
@@ -154,8 +165,48 @@
     el.results.container.classList.remove("hidden");
   }
 
+  function updateHighScores(scores) {
+    const scoreList = document.getElementById("scores-list");
+    scoreList.textContent = "";
+    scores.forEach((score) => {
+      const newItem = document.createElement("li");
+      newItem.textContent = `${score.initials} - ${score.score}`;
+      scoreList.appendChild(newItem);
+    });
+  }
+
   function onScoreSubmit(event) {
     event.preventDefault();
     console.log("onScoreSubmit()");
+    const highScoreList = loadScores() || [];
+    const initials = el.results.input.value;
+    if (!initials) {
+      el.results.validation.textContent = "You must enter a value";
+    } else {
+      el.results.validation.textContent = "";
+      el.results.submitButton.disabled = true;
+      const highScore = {
+        initials,
+        score,
+      };
+      highScoreList.push(highScore);
+      highScoreList.sort((a, b) => {
+        const result = b.score - a.score;
+        if (result === 0) {
+          return a.initials.localeCompare(b.initials);
+        }
+        return result;
+      });
+      saveScores(highScoreList);
+      updateHighScores(highScoreList);
+    }
+  }
+
+  function loadScores() {
+    return JSON.parse(localStorage.getItem(storageKey));
+  }
+
+  function saveScores(scores) {
+    localStorage.setItem(storageKey, JSON.stringify(scores));
   }
 })(); // IIFE

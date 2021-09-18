@@ -47,8 +47,8 @@ A small multiple choice quiz to test your javascript knowledge.
         <br/>
 
 - [x] WHEN user submits initials
-  - [ ] Load highscores from local storage
-  - [ ] Append new score to those in local storage
+  - [x] Load highscores from local storage
+  - [x] Append new score to those in local storage
   - [ ] Navigate to high scores page
 
 #### View highscore page
