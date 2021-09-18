@@ -5,8 +5,8 @@ A small multiple choice quiz to test your javascript knowledge.
 <hr>
 ### Logic Breakdown
 
-- [ ] Main page
-- [ ] Highscore page
+- [x] Main page
+- [x] Highscore page
 
 #### Main page
 

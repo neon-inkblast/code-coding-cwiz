@@ -19,6 +19,8 @@ h6 {
 h1 {
   font-size: 2rem;
   font-weight: 700;
+  flex: 1 1 auto;
+  text-align: right;
 }
 
 h2 {
@@ -44,17 +46,30 @@ p {
   margin-bottom: var(--space-2);
 }
 
-.flex-between {
-  display: flex;
-  width: 100%;
-  padding: var(--space-2);
-  justify-content: space-between;
-  align-items: center;
+main {
+  margin: var(--space-4) var(--space-2);
+  border: 2px solid var(--c-border);
+  min-height: 400px;
 }
 
-h1 {
-  flex: 1 1 auto;
-  text-align: right;
+ol {
+  list-style: decimal;
+  margin: var(--space-4);
+}
+
+ol li {
+  padding: var(--space-2);
+}
+
+ol li:nth-child(10n) {
+  border-bottom: 2px solid black;
+}
+
+ol li:nth-child(odd) {
+  background: var(--c-background-lighter);
+}
+ol li:nth-child(even) {
+  background: var(--c-background-darker);
 }
 
 a {
@@ -63,17 +78,12 @@ a {
   text-align: center;
 }
 
-main {
-  margin: var(--space-4) var(--space-2);
-  border: 2px solid var(--c-border);
-  min-height: 400px;
-}
-
-#timer {
-  white-space: nowrap;
-  text-align: right;
-  width: 60px;
-  display: inline-block;
+.flex-between {
+  display: flex;
+  width: 100%;
+  padding: var(--space-2);
+  justify-content: space-between;
+  align-items: center;
 }
 
 .correct {
@@ -90,6 +100,14 @@ main {
   margin: var(--space-4) var(--space-2);
   border: 2px solid var(--c-border);
   min-height: 400px;
+}
+
+#timer,
+#score {
+  white-space: nowrap;
+  text-align: right;
+  width: 60px;
+  display: inline-block;
 }
 
 .hidden {

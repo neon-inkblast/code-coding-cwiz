@@ -186,7 +186,7 @@
       el.results.validation.textContent = "";
       el.results.submitButton.disabled = true;
       const highScore = {
-        initials,
+        initials: initials.toUpperCase(),
         score,
       };
       highScoreList.push(highScore);
