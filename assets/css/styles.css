@@ -13,6 +13,7 @@ h5,
 h6 {
   margin-top: var(--space-2);
   margin-bottom: var(--space-2);
+  text-align:center;
 }
 
 h1 {
@@ -41,4 +42,46 @@ h6 {
 
 p {
   margin-bottom: var(--space-2);
+}
+
+header {
+  display: flex;
+  width:100%;
+  align-items: center;
+}
+
+h1 {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+a {
+  padding:var(--space-1);
+  text-decoration: none;
+  text-align: center;
+}
+
+main {
+  margin: var(--space-4) var(--space-2) ;
+  border: 2px solid var(--c-border);
+  min-height:800px;
+}
+
+.timer {
+  white-space: nowrap;
+  text-align:right;
+  padding:var(--space-2);
+}
+
+.start,
+.questions,
+.results
+{
+  margin: var(--space-4) var(--space-2) ;
+  border: 2px solid var(--c-border);
+  min-height:800px;
+}
+
+.hidden{ 
+  display:none;
 }

@@ -1,4 +1,4 @@
-button {
+button, .btn {
   background-color: var(--c-background);
   border-radius: var(--border-radius);
   border: var(--border) var(--c-border);
