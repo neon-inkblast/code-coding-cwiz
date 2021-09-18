@@ -10,7 +10,7 @@ A small multiple choice quiz to test your javascript knowledge.
 
 #### Main page
 
-- [ ] Start button
+- [x] Start button
       <br/>
 - WHEN user clicks start
   - [ ] Set score/timer/question back to initial values
