@@ -12,37 +12,41 @@ A small multiple choice quiz to test your javascript knowledge.
 
 - [x] Start button
       <br/>
-- WHEN user clicks start
-  - [ ] Set score/timer/question back to initial values
-  - [ ] Start timer
-  - [ ] Hide start button/welcome
-  - [ ] Display first question
+- [x] WHEN user clicks start
+  - [x] Set score/timer/question back to initial values
+  - [x] Start timer
+  - [x] Hide start button/welcome
+  - [x] Display first question
         <br/>
-- WHEN user clicks answer
-  <br/>
-- IF wrong
-  - [ ] Reduce timer
+- [x] When timer ticks
+  - [x] update timer display
+  - [x] check if timer is < 0
         <br/>
-- IF correct
-  - [ ] Increase score
+- [ ] WHEN user clicks answer
+      <br/>
+  - [ ] IF wrong
+    - [ ] Reduce timer
+          <br/>
+  - [ ] IF correct
+    - [ ] Increase score
+          <br/>
+  - [ ] IF last question
+    - [ ] End game
+          <br/>
+  - [ ] ELSE
+    - [ ] Display next question, restart this branch loop  
+           <br/>
+- [x] WHEN timer reaches 0
+  - [x] Stop timer
+  - [x] End game
         <br/>
-- IF last question
-  - [ ] End game
-        <br/>
-- ELSE
-  - [ ] Display next question, restart this branch loop  
-         <br/>
-- WHEN timer reaches 0
-  - [ ] Stop timer
-  - [ ] End game
-        <br/>
-- WHEN game ended
+- [ ] WHEN game ended
 
   - [ ] Show game over elements
   - [ ] Collect user initials
         <br/>
 
-- WHEN user submits initials
+- [ ] WHEN user submits initials
   - [ ] Load highscores from local storage
   - [ ] Append new score to those in local storage
   - [ ] Navigate to high scores page

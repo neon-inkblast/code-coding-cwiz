@@ -13,7 +13,7 @@ h5,
 h6 {
   margin-top: var(--space-2);
   margin-bottom: var(--space-2);
-  text-align:center;
+  text-align: center;
 }
 
 h1 {
@@ -46,8 +46,8 @@ p {
 
 .flex-between {
   display: flex;
-  width:100%;
-  padding:var(--space-2);
+  width: 100%;
+  padding: var(--space-2);
   justify-content: space-between;
   align-items: center;
 }
@@ -58,31 +58,32 @@ h1 {
 }
 
 a {
-  padding:var(--space-1);
+  padding: var(--space-1);
   text-decoration: none;
   text-align: center;
 }
 
 main {
-  margin: var(--space-4) var(--space-2) ;
+  margin: var(--space-4) var(--space-2);
   border: 2px solid var(--c-border);
-  min-height:400px;
+  min-height: 400px;
 }
 
-.timer {
+#timer {
   white-space: nowrap;
-  text-align:right;
+  text-align: right;
+  width: 60px;
+  display: inline-block;
 }
 
 .start,
 .questions,
-.results
-{
-  margin: var(--space-4) var(--space-2) ;
+.results {
+  margin: var(--space-4) var(--space-2);
   border: 2px solid var(--c-border);
-  min-height:400px;
+  min-height: 400px;
 }
 
-.hidden{ 
-  display:none;
+.hidden {
+  display: none;
 }

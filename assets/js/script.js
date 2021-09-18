@@ -12,11 +12,16 @@
       header: document.querySelector(".questions h2"),
       answerBtns: document.querySelectorAll(".answer-btn"),
     },
+    timer: document.getElementById("timer"),
+    score: document.getElementById("score"),
   };
 
-  // Game variables
+  // Game variable initial values
   let currentQuestion = 0;
   let score = 0;
+  const timerInitialValue = 180;
+  let timer = timerInitialValue;
+  let timerHandle = null;
 
   // Event listeners
   el.start.button.addEventListener("click", onStartClick);
@@ -29,6 +34,7 @@
   function startQuiz() {
     console.log("startQuiz()");
     initQuiz();
+    startTimer();
     showQuestion(currentQuestion);
   }
 
@@ -37,6 +43,7 @@
     // set score and question index back to initial values
     score = 0;
     currentQuestion = 0;
+    timer = timerInitialValue;
   }
 
   function showQuestion(questionIndex) {
@@ -52,5 +59,32 @@
     el.question.answerBtns.forEach((btn, index) => {
       btn.textContent = currentQuestion.answers[index];
     });
+  }
+
+  function updateTimerDisplay() {
+    const min = Math.floor(timer / 60);
+    const sec = timer % 60;
+    el.timer.textContent = `${min}m ${sec}s`;
+  }
+
+  function startTimer() {
+    console.log("startTimer()");
+    timerHandle = setInterval(onTimerTick, 1000);
+
+    function onTimerTick() {
+      console.log("onTimer()");
+      updateTimerDisplay();
+
+      if (timer <= 0) {
+        endQuiz();
+      } else {
+        timer--;
+      }
+    }
+  }
+
+  function endQuiz() {
+    console.log("endQuiz()");
+    clearInterval(timerHandle);
   }
 })(); // IIFE
