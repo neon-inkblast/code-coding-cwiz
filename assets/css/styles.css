@@ -44,15 +44,17 @@ p {
   margin-bottom: var(--space-2);
 }
 
-header {
+.flex-between {
   display: flex;
   width:100%;
+  padding:var(--space-2);
+  justify-content: space-between;
   align-items: center;
 }
 
 h1 {
   flex: 1 1 auto;
-  text-align: center;
+  text-align: right;
 }
 
 a {
@@ -64,13 +66,12 @@ a {
 main {
   margin: var(--space-4) var(--space-2) ;
   border: 2px solid var(--c-border);
-  min-height:800px;
+  min-height:400px;
 }
 
 .timer {
   white-space: nowrap;
   text-align:right;
-  padding:var(--space-2);
 }
 
 .start,
@@ -79,7 +80,7 @@ main {
 {
   margin: var(--space-4) var(--space-2) ;
   border: 2px solid var(--c-border);
-  min-height:800px;
+  min-height:400px;
 }
 
 .hidden{ 
