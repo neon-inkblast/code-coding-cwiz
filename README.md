@@ -22,19 +22,19 @@ A small multiple choice quiz to test your javascript knowledge.
   - [x] update timer display
   - [x] check if timer is < 0
         <br/>
-- [ ] WHEN user clicks answer
+- [x] WHEN user clicks answer
       <br/>
-  - [ ] IF wrong
-    - [ ] Reduce timer
+  - [x] IF wrong
+    - [x] Reduce timer
           <br/>
-  - [ ] IF correct
-    - [ ] Increase score
+  - [x] IF correct
+    - [x] Increase score
           <br/>
   - [ ] IF last question
     - [ ] End game
           <br/>
-  - [ ] ELSE
-    - [ ] Display next question, restart this branch loop  
+  - [x] ELSE
+    - [x] Display next question, restart this branch loop  
            <br/>
 - [x] WHEN timer reaches 0
   - [x] Stop timer

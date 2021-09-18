@@ -18,9 +18,11 @@
   };
 
   // Game variable initial values
+  const scoreIncrement = 10;
+  const timerIncrement = 10;
+  const timerInitialValue = 180;
   let currentQuestion = 0;
   let score = 0;
-  const timerInitialValue = 180;
   let timer = timerInitialValue;
   let timerHandle = null;
 
@@ -48,6 +50,8 @@
     score = 0;
     currentQuestion = 0;
     timer = timerInitialValue;
+    updateScoreDisplay();
+    updateTimerDisplay();
   }
 
   function showQuestion() {
@@ -80,11 +84,15 @@
   }
 
   function correctAnswer(element) {
+    score += scoreIncrement;
+    updateScoreDisplay();
     element.classList.add("correct");
     element.textContent = "Correct!";
   }
 
   function incorrectAnswer(element) {
+    timer -= timerIncrement;
+    updateTimerDisplay();
     element.classList.add("incorrect");
     element.textContent = "Wrong!";
   }
@@ -104,6 +112,10 @@
     const min = Math.floor(timer / 60);
     const sec = timer % 60;
     el.timer.textContent = `${min}m ${sec}s`;
+  }
+
+  function updateScoreDisplay() {
+    el.score.textContent = `${score} points`;
   }
 
   function startTimer() {
