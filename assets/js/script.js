@@ -105,7 +105,11 @@
 
   function nextQuestion() {
     currentQuestion++;
-    showQuestion();
+    if (currentQuestion >= questions.length) {
+      endQuiz();
+    } else {
+      showQuestion();
+    }
   }
 
   function updateTimerDisplay() {

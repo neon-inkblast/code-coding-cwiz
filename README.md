@@ -30,8 +30,8 @@ A small multiple choice quiz to test your javascript knowledge.
   - [x] IF correct
     - [x] Increase score
           <br/>
-  - [ ] IF last question
-    - [ ] End game
+  - [x] IF last question
+    - [x] End game
           <br/>
   - [x] ELSE
     - [x] Display next question, restart this branch loop  
