@@ -13,6 +13,11 @@
       answerBtns: document.querySelectorAll(".answer-btn"),
       feedback: document.querySelector(".feedback"),
     },
+    results: {
+      container: document.querySelector(".results"),
+      input: document.querySelector(".results input"),
+      button: document.querySelector(".results .btn"),
+    },
     timer: document.getElementById("timer"),
     score: document.getElementById("score"),
   };
@@ -27,10 +32,14 @@
   let timerHandle = null;
 
   // Event listeners
+  // start button
   el.start.button.addEventListener("click", onStartClick);
+  // answer buttons
   el.question.answerBtns.forEach((btn, index) => {
     btn.addEventListener("click", checkAnswerFn(index));
   });
+  // high score button
+  el.results.button.addEventListener("click", onScoreSubmit);
 
   function onStartClick() {
     console.log("start-btn clicked");
@@ -141,5 +150,12 @@
   function endQuiz() {
     console.log("endQuiz()");
     clearInterval(timerHandle);
+    el.question.container.classList.add("hidden");
+    el.results.container.classList.remove("hidden");
+  }
+
+  function onScoreSubmit(event) {
+    event.preventDefault();
+    console.log("onScoreSubmit()");
   }
 })(); // IIFE

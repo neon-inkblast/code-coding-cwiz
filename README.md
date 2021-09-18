@@ -40,13 +40,13 @@ A small multiple choice quiz to test your javascript knowledge.
   - [x] Stop timer
   - [x] End game
         <br/>
-- [ ] WHEN game ended
+- [x] WHEN game ended
 
-  - [ ] Show game over elements
-  - [ ] Collect user initials
+  - [x] Show game over elements
+  - [x] Collect user initials
         <br/>
 
-- [ ] WHEN user submits initials
+- [x] WHEN user submits initials
   - [ ] Load highscores from local storage
   - [ ] Append new score to those in local storage
   - [ ] Navigate to high scores page
