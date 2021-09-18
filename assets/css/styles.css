@@ -76,6 +76,14 @@ main {
   display: inline-block;
 }
 
+.correct {
+  background: green;
+}
+
+.incorrect {
+  background: red;
+}
+
 .start,
 .questions,
 .results {

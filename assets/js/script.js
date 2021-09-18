@@ -11,6 +11,7 @@
       container: document.querySelector(".questions"),
       header: document.querySelector(".questions h2"),
       answerBtns: document.querySelectorAll(".answer-btn"),
+      feedback: document.querySelector(".feedback"),
     },
     timer: document.getElementById("timer"),
     score: document.getElementById("score"),
@@ -76,6 +77,22 @@
       delayedRemoveFeedback(feedbackEl);
       nextQuestion();
     };
+  }
+
+  function correctAnswer(element) {
+    element.classList.add("correct");
+    element.textContent = "Correct!";
+  }
+
+  function incorrectAnswer(element) {
+    element.classList.add("incorrect");
+    element.textContent = "Wrong!";
+  }
+
+  function delayedRemoveFeedback(element) {
+    setTimeout(function () {
+      element.remove();
+    }, 2000);
   }
 
   function nextQuestion() {
