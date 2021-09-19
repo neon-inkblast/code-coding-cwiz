@@ -199,6 +199,7 @@
       });
       saveScores(highScoreList);
       updateHighScores(highScoreList);
+      setTimeout(navigateToHighScores, 2500);
     }
   }
 
@@ -208,5 +209,9 @@
 
   function saveScores(scores) {
     localStorage.setItem(storageKey, JSON.stringify(scores));
+  }
+
+  function navigateToHighScores() {
+    window.location.href = "./highscores.html";
   }
 })(); // IIFE
