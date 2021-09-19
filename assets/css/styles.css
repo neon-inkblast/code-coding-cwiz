@@ -41,7 +41,7 @@ h5 {
 h6 {
   font-size: 1.1rem;
 }
-
+/* -------------- Element Styles ------------------- */
 p {
   margin-bottom: var(--space-2);
 }
@@ -62,7 +62,7 @@ ol li {
 }
 
 ol li:nth-child(10n) {
-  border-bottom: 2px solid black;
+  margin-bottom: var(--space-2);
 }
 
 ol li:nth-child(odd) {
@@ -78,38 +78,99 @@ a {
   text-align: center;
 }
 
-.flex-between {
+code {
+  background: var(--c-background-lighter);
+  color: var(--c-foreground-darker);
+  display: inline-block;
+  font-family: monospace;
+  font-weight: 300;
+  margin: var(--space-1);
+  padding: 0 var(--space-2);
+}
+
+/* -------------- Class Styles ------------------- */
+.flex-row {
   display: flex;
-  width: 100%;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   padding: var(--space-2);
-  justify-content: space-between;
+  width: 100%;
+}
+
+.flex-col {
+  display: flex;
+  padding: 0 var(--space-2);
+  flex-flow: column nowrap;
+  justify-content: center;
   align-items: center;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.answer-btn {
+  padding: 2px var(--space-2);
+  min-width: 200px;
+}
+
 .correct {
-  background: green;
+  color: green;
 }
 
 .incorrect {
-  background: red;
+  color: red;
 }
 
 .start,
 .questions,
 .results {
-  margin: var(--space-4) var(--space-2);
-  border: 2px solid var(--c-border);
+  border-top: 2px solid var(--c-border);
   min-height: 400px;
 }
 
-#timer,
-#score {
+.results button {
+  margin: var(--space-2);
+}
+
+.score {
+  flex: 0 0 200px;
+}
+
+.timer {
+  flex: 0 0 200px;
+  text-align: right;
+}
+
+.feedback {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* -------------- ID Styles ------------------- */
+#question-header {
+  margin-top: var(--space-2);
+  min-height: 60px;
+}
+
+#timer-span,
+#score-span {
   white-space: nowrap;
   text-align: right;
   width: 60px;
   display: inline-block;
 }
 
-.hidden {
-  display: none;
+#validation {
+  padding: var(--space-2);
+  width: 200px;
 }

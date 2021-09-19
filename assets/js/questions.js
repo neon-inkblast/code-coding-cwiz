@@ -5,7 +5,7 @@ const questions = [
     correct: 1,
   },
   {
-    question: 'How would I run a function called "myFunction"?',
+    question: "How would I run a function called <code>myFunction</code>?",
     answers: ["myFunction", "run.myFunction", "myFunction()", "myfunction.run"],
     correct: 2,
   },
@@ -30,7 +30,7 @@ const questions = [
     correct: 3,
   },
   {
-    question: '"var x = true ? 3 : 4; " \nWhat is the value of x?',
+    question: "<code>var x = true ? 3 : 4;</code><br> What is the value of x?",
     answers: ["3", "4", "7", "true"],
     correct: 0,
   },

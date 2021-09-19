@@ -31,7 +31,7 @@
   </head>
 
   <body class="dark">
-    <header class="flex-between">
+    <header class="flex-row space-between">
       <nav>
         <a href="./highscores.html" class="btn btn-secondary">View highscores</a>
       </nav>
@@ -39,30 +39,36 @@
     </header>
 
     <main>
-      <div class="flex-between">
-        <div>Score: <span id="score"></span></div>
-        <div>Time remaining: <span id="timer"></span></div>
+      <div class="flex-row space-between game-stats">
+        <div class="score">Score: <span id="score-span"></span></div>
+        <div class="feedback"></div>
+        <div class="timer">Time remaining: <span id="timer-span"></span></div>
       </div>
-      <section class="start">
+      <section class="start flex-col">
         <h2>Start</h2>
         <button class="start-btn">Start Quiz</button>
       </section>
       <section class="questions hidden">
         <h2 id="question-header">Questions</h2>
-        <button class="answer-btn">1</button>
-        <button class="answer-btn">2</button>
-        <button class="answer-btn">3</button>
-        <button class="answer-btn">4</button>
-        <div class="feedback"></div>
+        <div class="flex-row align-start">
+          <div class="flex-col">
+            <button class="answer-btn btn-inverse">1</button>
+            <button class="answer-btn btn-inverse">2</button>
+            <button class="answer-btn btn-inverse">3</button>
+            <button class="answer-btn btn-inverse">4</button>
+          </div>
+        </div>
       </section>
       <section class="results hidden">
         <h2>Results</h2>
-        <form>
+        <form class="flex-col">
           <label labelFor="initials">Initials</label>
           <input id="initials-input" name="initials" type="text" placeholder="BIN" maxlength="3" />
+          <div class="flex-row">
+            <button id="submit" class="btn btn-primary">Submit</button>
+            <button id="try-again" class="btn btn-secondary">Try again</button>
+          </div>
           <div id="validation"></div>
-          <button id="submit" class="btn btn-primary">Submit</button>
-          <button id="try-again" class="btn btn-secondary">Try again</button>
           <ul id="scores-list"></ul>
         </form>
       </section>

@@ -20,8 +20,8 @@
       submitButton: document.querySelector("#submit"),
       tryAgainButton: document.querySelector("#try-again"),
     },
-    timer: document.getElementById("timer"),
-    score: document.getElementById("score"),
+    timer: document.getElementById("timer-span"),
+    score: document.getElementById("score-span"),
   };
 
   // Game variables constants
@@ -82,7 +82,7 @@
     // unhide the questions sections
     el.question.container.classList.remove("hidden");
     // set question text into question header
-    el.question.header.textContent = question.question;
+    el.question.header.innerHTML = question.question;
     // loop through the answer button elements and update text for each one
     el.question.answerBtns.forEach((btn, index) => {
       btn.textContent = question.answers[index];

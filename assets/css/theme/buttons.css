@@ -58,3 +58,7 @@ button:active,
   border: var(--border) var(--c-primary);
   color: var(--c-primary);
 }
+
+.btn:disabled {
+  background: var(--c-foreground-darker);
+}
