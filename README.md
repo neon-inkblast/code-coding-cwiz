@@ -49,13 +49,13 @@ A small multiple choice quiz to test your javascript knowledge.
 - [x] WHEN user submits initials
   - [x] Load highscores from local storage
   - [x] Append new score to those in local storage
-  - [ ] Navigate to high scores page
+  - [x] Navigate to high scores page
 
 #### View highscore page
 
-- [ ] Load scores from localstorage
-- [ ] Sort scores
-- [ ] Display scores
+- [x] Load scores from localstorage
+- [x] Sort scores
+- [x] Display scores
 <hr>
 
 ### Extension ideas

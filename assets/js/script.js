@@ -1,4 +1,4 @@
-//Immediately invoked function expression (IIFE) pattern keeps our globals
+// Immediately invoked function expression (IIFE) pattern keeps our globals
 // scoped to the function expression wrapper, off the real global.
 (function () {
   // DOM elements, kept as an object for easy tracking in the IDE
